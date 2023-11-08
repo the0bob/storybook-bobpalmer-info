@@ -1,0 +1,6 @@
+spec:
+  name: hob-ui
+  services:
+  - name: server
+    features:
+      - buildpack-stack=ubuntu-22

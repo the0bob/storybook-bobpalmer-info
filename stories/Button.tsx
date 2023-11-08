@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes }  from 'react';
 import './button.css';
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   /**
    * Is this the principal call to action on the page?
    */
@@ -17,7 +17,11 @@ interface ButtonProps {
   /**
    * Button contents
    */
-  label: string;
+  label?: string;
+  /**
+   * Element contents
+   */
+  children?: React.ReactNode;
   /**
    * Optional click handler
    */
@@ -32,6 +36,7 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
+  children,
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
@@ -42,7 +47,7 @@ export const Button = ({
       style={{ backgroundColor }}
       {...props}
     >
-      {label}
+      {children ?? label}
     </button>
   );
 };

@@ -67,3 +67,14 @@
 .storybook-page .tip-wrapper svg path {
   fill: #1ea7fd;
 }
+
+.storybook-page .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.storybook-page .form-element {
+  margin: 4px;
+  display: flex;
+  flex-direction: row;
+}

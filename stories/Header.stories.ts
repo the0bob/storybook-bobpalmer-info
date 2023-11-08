@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Header } from './Header';
 
 const meta = {
-  title: 'Example/Header',
+  title: 'Components/Header',
   component: Header,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
@@ -14,13 +14,15 @@ const meta = {
 } satisfies Meta<typeof Header>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Header>;
 
 export const LoggedIn: Story = {
   args: {
     user: {
       name: 'Jane Doe',
     },
+    brandName: 'My Brand',
+    brandIcon: '/stories/assets/hob-icon.png'
   },
 };
 
