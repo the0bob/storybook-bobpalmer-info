@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import { Header } from './Header';
+
+const defaultImg = 'https://avatars.githubusercontent.com/u/13439002?&v=4';
 
 const meta = {
   title: 'Components/Header',
@@ -22,7 +23,7 @@ export const LoggedIn: Story = {
       name: 'Jane Doe',
     },
     brandName: 'My Brand',
-    brandIcon: '/stories/assets/hob-icon.png'
+    brandIcon: defaultImg,
   },
 };
 
