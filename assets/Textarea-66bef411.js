@@ -1,2 +1,0 @@
-import{j as r}from"./jsx-runtime-29545a09.js";const t=({backgroundColor:a,...e})=>r("textarea",{...e,className:["storybook-textarea"].join(" ")+" "+(e==null?void 0:e.className),style:{backgroundColor:a,...e==null?void 0:e.style}});try{t.displayName="Textarea",t.__docgenInfo={description:"Primary UI component for user interaction",displayName:"Textarea",props:{backgroundColor:{defaultValue:null,description:"What background color to use",name:"backgroundColor",required:!1,type:{name:"string"}}}}}catch{}export{t as T};
-//# sourceMappingURL=Textarea-66bef411.js.map
