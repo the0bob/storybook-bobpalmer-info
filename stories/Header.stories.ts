@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Header } from './Header';
+import { Header } from '../src/components/Header';
 
 const defaultImg = 'https://avatars.githubusercontent.com/u/13439002?&v=4';
 
