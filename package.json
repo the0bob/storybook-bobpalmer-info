@@ -1,7 +1,5 @@
 {
-  "private": true,
-  "packageManager": "pnpm@6.32.3",
-  "homepage": "http://the0bob.github.io/hob-ui",
+  "homepage": "https://storybook.bobpalmer.info",
   "scripts": {
     "lint": "eslint src --ext .tsx,.ts,.js,.jsx",
     "typecheck": "tsc --noEmit",
