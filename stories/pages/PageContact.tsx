@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Header } from './Header';
-import { Input } from './Input';
-import { Textarea } from './Textarea';
-import { Button } from './Button';
+import { Header } from '../components/Header';
+import { Input } from '../components/Input';
+import { Textarea } from '../components/Textarea';
+import { Button } from '../components/Button';
 import './pageContact.css';
 
 type User = {

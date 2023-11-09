@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from './Button';
 import './header.css';
 
+const defaultImg = 'https://avatars.githubusercontent.com/u/13439002?&v=4';
 type User = {
   name: string;
 };
@@ -15,15 +16,12 @@ interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   onCreateAccount: () => void;
 }
 
-export const Header = ({ brandIcon, brandName, user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
+export const Header = ({ brandIcon, brandName = "My Brand", user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
   <header>
     <div className="storybook-header">
       <div>
-        {brandIcon 
-          ? <img src={brandIcon} width="32" height="32" /> 
-          : <img src={'/stories/assets/hob-icon.png'} width="32" height="32" 
-        />}
-        <h1>{brandName ?? 'HobUI'}</h1>
+        <img src={brandIcon ?? defaultImg} width="32" height="32" />
+        <h1>{brandName}</h1>
       </div>
       <div>
         {user ? (
