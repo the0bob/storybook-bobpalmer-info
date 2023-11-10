@@ -1,5 +1,8 @@
 {
   "homepage": "https://storybook.bobpalmer.info",
+  "engines": {
+    "node": "^18.17.1"
+  },
   "scripts": {
     "lint": "eslint src --ext .tsx,.ts,.js,.jsx",
     "typecheck": "tsc --noEmit",
@@ -7,7 +10,7 @@
     "storybook": "storybook dev",
     "build": "storybook build -o dist",
     "predeploy": "npm run build",
-    "deploy": "echo storybook.bobpalmer.info > ./build/CNAME && gh-pages -d dist"
+    "deploy": "echo storybook.bobpalmer.info > ./dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^1.5.0",
