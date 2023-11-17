@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Input } from '../src/components/Input';
+import { Input } from '../../src/components/Input';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -14,6 +14,7 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
+    color: { control: 'color' },
   },
 } satisfies Meta<typeof Input>;
 
@@ -24,5 +25,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     placeholder: 'Input',
+    type: 'text',
+    backgroundColor: 'white',
+    color: 'black',
   },
 };

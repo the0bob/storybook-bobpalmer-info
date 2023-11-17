@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes }  from 'react';
-import './button.css';
+import '../styles.css';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   /**
@@ -36,7 +36,6 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
-  children,
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
@@ -47,7 +46,7 @@ export const Button = ({
       style={{ backgroundColor }}
       {...props}
     >
-      {children ?? label}
+      {props.children ?? label}
     </button>
   );
 };

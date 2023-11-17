@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
-import './header.css';
+import '../styles.css';
 
 const defaultImg = 'https://avatars.githubusercontent.com/u/13439002?&v=4';
 type User = {

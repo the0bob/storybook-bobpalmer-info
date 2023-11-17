@@ -1,16 +1,16 @@
+import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-
-import { Header } from '../components/Header';
-import { Input } from '../components/Input';
-import { Textarea } from '../components/Textarea';
-import { Button } from '../components/Button';
-import './pageContact.css';
+import { Header } from '../../src/components/Header';
+import { Input } from '../../src/components/Input';
+import { Textarea } from '../../src/components/Textarea';
+import { Button } from '../../src/components/Button';
+import '../styles.css';
 
 type User = {
   name: string;
 };
 
-export const PageContact: React.FC = () => {
+const Contact: React.FC = () => {
   const [user, setUser] = React.useState<User>();
 
   return (
@@ -42,3 +42,17 @@ export const PageContact: React.FC = () => {
     </article>
   );
 };
+
+const meta = {
+  title: 'Pages/Contact',
+  component: Contact,
+  // parameters: {
+  //   layout: 'fullscreen',
+  // },
+  // argTypes: {
+  //   backgroundColor: { control: 'color' },
+  // },
+} satisfies Meta<typeof Contact>;
+
+export { Contact };
+export default meta;

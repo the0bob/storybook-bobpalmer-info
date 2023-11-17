@@ -1,5 +1,5 @@
 import React, { InputHTMLAttributes } from 'react';
-import './input.css';
+import '../styles.css';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   /**
@@ -13,13 +13,14 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
  */
 export const Input = ({
   backgroundColor,
+  color,
   ...props
 }: InputProps) => {
   return (
     <input
       {...props}
       className={['storybook-input'].join(' ') + ' ' + props?.className}
-      style={{ backgroundColor, ...props?.style }}
+      style={{ backgroundColor, color, ...props?.style }}
     />
   );
 };
